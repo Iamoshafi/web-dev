@@ -73,7 +73,7 @@ h6 {
   --White: hsl(0, 0%, 100%);
 
   /* font family*/
-  --ff-base: "Roboto", sans-serif;
+  --ff-base: 'Roboto', sans-serif;
 
   /* font weight*/
   --fw-regular: 400;
@@ -104,20 +104,6 @@ body {
   overflow: hidden;
   max-width: 600px;
 }
-
-@media (min-width: 600px) {
-  .content {
-    grid-template-columns: 1fr 1fr;
-    display: flex;
-    flex-direction: row-reverse;
-    border-radius: 1.5rem;
-  }
-
-  .image {
-    padding: 15px;
-  }
-}
-
 .letter_content {
   display: grid;
   gap: 0.5rem;
@@ -153,10 +139,8 @@ body {
   background-color: var(--Tomato);
 }
 
+/* Success message */
 /*hidden class */
-.attribution {
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -168,19 +152,16 @@ body {
   line-height: 1.1;
   border-radius: 20px;
 }
-
 .hidden {
   display: none;
 }
-
 .confirm-head {
   color: var(--Charcoal-Grey);
   font-size: 40px;
 }
-.confirm-text{
+.confirm-text {
   line-height: 1.3;
 }
-
 .button2 {
   cursor: pointer;
   padding: 15px;
@@ -192,15 +173,39 @@ body {
 .button2:hover {
   background-color: var(--Tomato);
 }
-
 .success-img {
   width: 15%;
 }
-
 .confirm-email {
   color: var(--Dark-Slate-Grey);
 }
-
-.error{
+.error {
   color: red;
+}
+
+/* Media query */
+@media (min-width: 600px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 1.5rem;
+  }
+  .image {
+    padding: 15px;
+  }
+  .attribution {
+    display: block;
+  }
+}
+
+/* Frontend mentor attribution */
+.attribution {
+  font-size: 11px;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
