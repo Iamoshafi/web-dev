@@ -138,6 +138,21 @@ body {
 .button:hover {
   background-color: var(--Tomato);
 }
+/* Media query */
+@media (min-width: 600px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 1.5rem;
+  }
+  .image {
+    padding: 15px;
+  }
+  .attribution {
+    display: block;
+  }
+}
 
 /* Success message */
 /*hidden class */
@@ -181,22 +196,6 @@ body {
 }
 .error {
   color: red;
-}
-
-/* Media query */
-@media (min-width: 600px) {
-  .content {
-    grid-template-columns: 1fr 1fr;
-    display: flex;
-    flex-direction: row-reverse;
-    border-radius: 1.5rem;
-  }
-  .image {
-    padding: 15px;
-  }
-  .attribution {
-    display: block;
-  }
 }
 
 /* Frontend mentor attribution */
