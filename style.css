@@ -1,152 +1,206 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     Typographic tweaks!
     3. Add accessible line-height
     4. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
     5. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     6. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     7. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
     8. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
-:root{
-    /* Primary */
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  /* Primary */
 
-    --Tomato: hsl(4, 100%, 67%);
+  --Tomato: hsl(4, 100%, 67%);
 
-    /* Neutral */
+  /* Neutral */
 
-    --Dark-Slate-Grey: hsl(234, 29%, 20%);
-    --Charcoal-Grey: hsl(235, 18%, 26%);
-    --Grey: hsl(231, 7%, 60%);
-    --White: hsl(0, 0%, 100%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
 
-    /* font family*/
-    --ff-base:'Roboto', sans-serif;
+  /* font family*/
+  --ff-base: "Roboto", sans-serif;
 
-
-    /* font weight*/
-    --fw-regular: 400;
-    --fw-bold: 700;
+  /* font weight*/
+  --fw-regular: 400;
+  --fw-bold: 700;
 }
 
-
-body{
-    background-color:var(--Dark-Slate-Grey);
-    font-family: var(--ff-base);
-    font-weight: var(--fw-regular);
-    font-size: 0.75rem;
-    color: var(--Grey);
-    display: grid;
-    place-content: center;
-    min-height: 100vh;
-   
+body {
+  background-color: var(--Dark-Slate-Grey);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.75rem;
+  color: var(--Grey);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
 }
 
-.icon-cont{
+.icon-cont {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
-
-
-
-.content{
+.content {
   display: grid;
-  --letter-padding:1.5rem;
+  --letter-padding: 1.5rem;
   background-color: var(--White);
   overflow: hidden;
   max-width: 600px;
 }
 
-
-@media (min-width: 600px){
-  .content{
+@media (min-width: 600px) {
+  .content {
     grid-template-columns: 1fr 1fr;
     display: flex;
     flex-direction: row-reverse;
     border-radius: 1.5rem;
   }
 
-
-.image{
-  padding: 15px;
-}  
+  .image {
+    padding: 15px;
+  }
 }
 
-
-
-
-.letter_content{
+.letter_content {
   display: grid;
   gap: 0.5rem;
-  padding:var(--letter-padding);
+  padding: var(--letter-padding);
 }
 
-
-.letter_header{
+.letter_header {
   font-size: 2rem;
   font-family: var(--ff-base);
   color: var(--Charcoal-Grey);
 }
 
-
-.email{
+.email {
   font-size: 0.6rem;
   color: var(--Charcoal-Grey);
 }
 
-.input{
+.input {
   width: 100%;
   padding: 0.85em 1.5em;
   border-radius: 0.3rem;
 }
-.button{
+.button {
   cursor: pointer;
   padding: 0.85em 1.5em;
   border: 0;
   border-radius: 0.45rem;
   background-color: var(--Charcoal-Grey);
   color: var(--White);
-  
 }
 
-.button:hover{
+.button:hover {
   background-color: var(--Tomato);
+}
+
+/*hidden class */
+.attribution {
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-around;
+  background-color: var(--White);
+  width: 330px;
+  padding: 40px;
+  line-height: 1.1;
+  border-radius: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.confirm-head {
+  color: var(--Charcoal-Grey);
+  font-size: 40px;
+}
+.confirm-text{
+  line-height: 1.3;
+}
+
+.button2 {
+  cursor: pointer;
+  padding: 15px;
+  border: 0;
+  border-radius: 0.45rem;
+  background-color: var(--Charcoal-Grey);
+  color: var(--White);
+}
+.button2:hover {
+  background-color: var(--Tomato);
+}
+
+.success-img {
+  width: 15%;
+}
+
+.confirm-email {
+  color: var(--Dark-Slate-Grey);
+}
+
+.error{
+  color: red;
 }
