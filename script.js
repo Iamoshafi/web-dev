@@ -6,6 +6,7 @@ const button = document.querySelector('.button');
 const button2 = document.querySelector('.button2');
 const input = document.querySelector('.input');
 const error = document.querySelector('.error');
+const confirmEMail = document.querySelector('.confirm-email')
 let mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 button.addEventListener('click', function () {
@@ -16,6 +17,7 @@ button.addEventListener('click', function () {
   } else {
     card.classList.toggle('hidden');
     content.classList.toggle('hidden');
+    confirmEMail.textContent = `${input.value}`
   }
 });
 
